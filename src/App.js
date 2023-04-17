@@ -4,27 +4,23 @@ import Header from "./components/header/Header";
 import Categories from "./components/categories/Categories";
 import Sort from "./components/sort/Sort";
 import PizzaBlock from "./components/pizzaBlock/PizzaBlock";
+import pizzas from "./assets/pizzas.json";
 
 function App(props) {
   return (
-    <div class="wrapper">
+    <div className="wrapper">
       <Header />
-      <div class="content">
-        <div class="container">
-          <div class="content__top">
+      <div className="content">
+        <div className="container">
+          <div className="content__top">
             <Categories />
             <Sort />
           </div>
-          <h2 class="content__title">Все пиццы</h2>
-          <div class="content__items">
-            <PizzaBlock title="Мексиканская" price="500"/>
-            <PizzaBlock />
-            <PizzaBlock />
-            <PizzaBlock />
-            <PizzaBlock />
-            <PizzaBlock />
-            <PizzaBlock />
-            <PizzaBlock />
+          <h2 className="content__title">Все пиццы</h2>
+          <div className="content__items">
+            {pizzas.map((item) => {
+              return <PizzaBlock {...item}/>
+            })}
           </div>
         </div>
       </div>
