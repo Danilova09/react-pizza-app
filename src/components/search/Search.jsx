@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./Search.module.scss";
+import { SearchContext } from "../../App";
 
-function Search({ searchValue, setSearchValue }) {
+function Search() {
+  const { searchValue, setSearchValue } = useContext(SearchContext);
   return (
     <div className={styles.wrapper}>
       <svg
@@ -18,7 +20,7 @@ function Search({ searchValue, setSearchValue }) {
         <circle
           cx="21"
           cy="20"
-          fill="none"  
+          fill="none"
           r="16"
           stroke="#000000"
           strokeLinecap="round"
