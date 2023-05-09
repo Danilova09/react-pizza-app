@@ -18,7 +18,7 @@ function Categories({ value, onChangeCategory }) {
            <li
               key={index}
               onClick={() => onChangeCategory(index)}
-              className={value === index && 'active'}
+              className={value === index ? 'active' : ''}
             >
               {categoryName}
             </li>

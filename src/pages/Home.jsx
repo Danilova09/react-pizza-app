@@ -1,11 +1,8 @@
-import React, { useContext } from "react";
-import ReactPaginate from "react-paginate";
-
+import React, { useContext, useEffect, useState } from "react";
 import Categories from "../components/categories/Categories";
 import Sort from "../components/sort/Sort";
 import PizzaBlock from "../components/pizzaBlock/PizzaBlock";
 import PizzaSkeleton from "../components/pizzaBlock/Skeleton";
-import { useEffect, useState } from "react";
 import Pagination from "../components/pagination/Pagination";
 import { SearchContext } from "../App";
 
