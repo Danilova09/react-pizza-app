@@ -6,7 +6,6 @@ import Header from "./components/header/Header";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import NotFound from "./pages/NotFound";
-import { decrement, increment } from "./redux/slices/filterSlice";
 
 export const SearchContext = React.createContext("");
 function App() {
